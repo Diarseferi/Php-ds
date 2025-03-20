@@ -56,7 +56,74 @@
         break;
     }
 
+    $day="E enjte"
+        switch($day){
+            
+            case="e hane"
+            echo "e hane";
+            break;
+
+            case="e marte"
+            echo "e marte";
+            break;
+
+            case="e merkure"
+            echo "e merkure";
+            break;
+
+            case="e enjte"
+            echo "e enjte";
+            break;
+
+            case="e premte"
+            echo "e premte";
+            break;
+
+            case="e shtune"
+            echo "e shtune";
+            break;
+
+            case="e dielle"
+            echo "e dielle";
+            break;
+        }
+        
     
+    $whileVar=1;
+     while($whileVar >= 5){
+        echo "<br>Numri is $whileVar </br>"
+        $whileVar++;
+     }
+    
+    $dowhile=1;
+    do($dowhile <= 5){
+        echo "The number is $dowhile </br>"
+        $dowhile++;
+    }while($dowhile < 5);
+
+    for($forVar = 0; $forVar < 5; $forVar++){
+        echo "The number is $forVar </br>";
+    }
     ?>
+
+    <?php
+    $cars= array("BMW","Audi","Volvo","Tesla")
+    foreach($cars as $value){
+        echo "$value </br>";
+    }
+       
+    ?>
+
+
+    <?php
+    $age= array("John " => "18", "Micheal" => "25", "Emma" => "22");
+    foreach($age as $x1 => $value){
+        echo "$x1 is $value years old </br>";
+    }
+
+    ?>
+    
+    
+    
 </body>
 </html>
