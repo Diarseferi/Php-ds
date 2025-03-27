@@ -67,24 +67,92 @@
     ?>
 
     <?php
-    function divisible($n){
-        if(($n % 2 ) == 0){
-            return"$n eshte e plotpjestueshme me 2";
-        }
+    // function divisible($n){
+    //     if(($n % 2 ) == 0){
+    //         return"$n eshte e plotpjestueshme me 2";
+    //     }
 
 
-        else{
-            return"$n nuk eshte e plotpjestueshme me 2";
-        }
-    }
+    //     else{
+    //         return"$n nuk eshte e plotpjestueshme me 2";
+    //     }
+    // }
 
-    print_r(fully_divisible(4). "<br>");
-    print_r(fully_divisible(35). "<br>");
-    print_r(fully_divisible(16). "<br>");
-    print_r(fully_divisible(3). "<br>");
+    // print_r(fully_divisible(4). "<br>");
+    // print_r(fully_divisible(35). "<br>");
+    // print_r(fully_divisible(16). "<br>");
+    // print_r(fully_divisible(3). "<br>");
 
-   
+    ?>
 
+    <?php
+    //  $x=5;
+
+    //  function Draw(){
+    //     $y=10;
+    //     echo $y;
+    //  }
+    // echo "\n ,$x";
+
+    // Draw()
+    ?>
+
+    <?php
+    // $x=5;
+    // $y=10;
+
+    // function sum(){
+    //     global $x,$y;
+    //     $y= $x+$y;
+    // }
+    // sum();
+    // echo $y;
+    ?>
+
+    <?php
+    // function Counter(){
+    //     static $counter;
+    //     $counter++;
+    //     echo "Vlera e count is:$counter <br>";
+    // }
+    // Counter();
+    // Counter();
+    ?>
+
+    <?php 
+    // $sports = array("Real madrid","Barcelona","Chelsea","Arsenal");
+
+    // $sport = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+    // // echo $sport[0];
+    // echo end ($sport);
+    // echo count($sport);
+
+    ?>
+
+    <?php
+    // $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+
+    // $len=count($sports);
+
+    // for($i=0, $i<$len ,$i++){
+    //     echo  $sports[$i], "\n";
+    // }
+
+    ?>
+
+    <?php 
+    $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+
+    array_push($sports,"Ben fica");
+    var_dump($sports);
+
+    ?>
+
+<?php 
+    $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+
+    array_pop($sports);
+    var_dump($sports);
 
     ?>
 </body>
