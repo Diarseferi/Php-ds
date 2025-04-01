@@ -141,19 +141,54 @@
     ?>
 
     <?php 
-    $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+    // $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
 
-    array_push($sports,"Ben fica");
-    var_dump($sports);
+    // array_push($sports,"Ben fica");
+    // var_dump($sports);
 
     ?>
 
 <?php 
-    $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
+    // $sports = ["Real madrid","Barcelona","Chelsea","Arsenal"];
 
-    array_pop($sports);
-    var_dump($sports);
+    // array_pop($sports);
+    // var_dump($sports);
 
+    ?>
+
+    <?php
+    // $sports = array("Real madrid","Barcelona","Ben fica");
+    // array_unshift($sports, "Chelsea");
+    // var_dump($sports);
+
+    ?>
+
+    <?php
+    // $sports = array("Real madrid","Barcelona","Ben fica");
+    // array_shift($sports);
+    // var_dump($sports);
+    ?>
+
+    <?php
+    // $sports = ["Real madrid","Barcelona","Ben fica","Chelsea","Arsenal"];
+
+    // $output =array_splice($sports,2);
+    // $output1 =array_splice($sports,3);
+    // $output2 =array_splice($sports,-2,1);
+
+    // var_dump($output,$output1,$output2);
+
+    ?>
+
+    <?php
+    // $sports = [12,24,36,48];
+    // var_dump(array_sum($sports));
+    ?>
+
+    <?php
+    $temp = [25,30,25, 26,20,28,25];
+    $average_temp =array_sum($temp)/7;
+    echo ($average_temp);
     ?>
 </body>
 </html>
