@@ -67,7 +67,7 @@
     // foreach($grade as $subject  =>$grade){
     //     echo "Subject".$subject."Grade:".$grade;
     //     echo"<br>";
-    }
+    // }
      ?>
 </body>
 </html>
