@@ -1,11 +1,12 @@
 <?php
+session_start();
 include_once "config.php";
 if(empty($_SESSION['username'])){
     header('Location:login.php');
 }
 
 $sql = "SELECT * FROM users";
-$selectUsers =$conn -> prepare($sql)
+$selectUsers =$conn -> prepare($sql);
 $selectUsers ->execute();
 
 $users_data =$selectUsers ->fetchAll();
@@ -73,20 +74,39 @@ $users_data =$selectUsers ->fetchAll();
         $users =$getUsers -> fetchAll();
         ?>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>id</th>
-                    <th>Username</th>
-                    <th></th>
-                     <th>id</th>
-                    <th>id</th>
-                     <th>id</th>
-
-                </tr>
-            </thead>
+              <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Username</th>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Email</th>
+              <th>Update</th>
+            </tr>
+          </thead>
+          <?php
+            foreach ($users as $user ) {
+          ?>
+          <tbody>
+            <tr> 
+              <td> <?= $user['id'] ?> </td>
+              <td> <?= $user['username'] ?> </td>
+              <td> <?= $user['name']  ?> </td> 
+              <td> <?= $user['surname']  ?> </td> 
+              <td> <?= $user['email']  ?> </td>
+              <td> <?= "<a href='delete.php?id=$user[id]'> Delete</a>| <a href='profile.php?id=$user[id]'> Update </a>"?></td>
+            </tr>
+          
+            <?php 
+              }
+            ?>
+          </tbody>
         </table>
-      </main>
-    </div>
+      </div>
+    </main>
   </div>
-  <?php include("footer.php")?>
+</div>
+
+
+<?php include("footer.php"); ?>
