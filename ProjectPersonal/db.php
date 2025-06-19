@@ -1,11 +1,10 @@
 <?php
-$host = 'localhost';
-$user = 'root';
-$pass = '';
-$db = 'real_madrid_tickets';
+$servername = "localhost";
+$username = "root";    // your DB user
+$password = "";        // your DB password
+$dbname = "event_booking";
 
-$conn = new mysqli($host, $user, $pass, $db);
-
+$conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
