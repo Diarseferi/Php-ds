@@ -86,7 +86,7 @@ nav a:hover {
 }
 
 .category ul li::before {
-  content: "🎯 ";
+  content: " ";
 }
 
 .category ul li {
@@ -181,7 +181,7 @@ table {
 table th,
 table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #007BFF;
 }
 
 table th {
