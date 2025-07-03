@@ -51,7 +51,7 @@ $events = $conn->query("SELECT * FROM events WHERE date >= CURDATE() ORDER BY da
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="UTF-8" />
   <title>Event Booking System</title>
   <link rel="stylesheet" href="style.css" />

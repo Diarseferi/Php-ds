@@ -1,85 +1,142 @@
+<?php
+// session_start(); // optional for future enhancements
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Event Booking | Welcome</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #4a90e2, #56ccf2);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-  <h2>🎫 Explore Event Categories</h2>
+    nav {
+      background: #4a90e2;
+      padding: 12px 20px;
+      display: flex;
+      gap: 20px;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-  <div class="category-grid">
-    <section class="category">
-      <h3>🏢 Corporate Events</h3>
-      <ul>
-        <li>Conferences</li>
-        <li>Seminars / Workshops</li>
-        <li>Product Launches</li>
-        <li>Team-Building Events</li>
-        <li>Trade Shows / Expos</li>
-        <li>Board Meetings / AGMs</li>
-        <li>Networking Events</li>
-      </ul>
-    </section>
+    nav a {
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+    }
 
-    <section class="category">
-      <h3>🎉 Social / Personal Events</h3>
-      <ul>
-        <li>Weddings</li>
-        <li>Birthday Parties</li>
-        <li>Anniversaries</li>
-        <li>Baby Showers / Gender Reveals</li>
-        <li>Graduation Parties</li>
-        <li>Retirement Parties</li>
-        <li>Housewarming Parties</li>
-      </ul>
-    </section>
+    nav a:hover {
+      text-decoration: underline;
+    }
 
-    <section class="category">
-      <h3>🎭 Entertainment Events</h3>
-      <ul>
-        <li>Concerts</li>
-        <li>Theater Performances</li>
-        <li>Comedy Shows</li>
-        <li>Movie Screenings</li>
-        <li>DJ Nights / Club Events</li>
-        <li>Talent Shows</li>
-      </ul>
-    </section>
+    .hero {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-    <section class="category">
-      <h3>🏆 Sports & Recreation</h3>
-      <ul>
-        <li>Tournaments</li>
-        <li>Marathons / Races</li>
-        <li>Sports Matches</li>
-        <li>Fitness Bootcamps / Yoga Retreats</li>
-      </ul>
-    </section>
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
 
-    <section class="category">
-      <h3>🕍 Religious & Cultural Events</h3>
-      <ul>
-        <li>Religious Ceremonies (e.g., baptisms, bar mitzvahs)</li>
-        <li>Festivals (e.g., Diwali, Eid, Christmas fairs)</li>
-        <li>Cultural Gatherings / Community Events</li>
-      </ul>
-    </section>
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin-bottom: 30px;
+    }
 
-    <section class="category">
-      <h3>🧑‍🎓 Educational Events</h3>
-      <ul>
-        <li>School Functions</li>
-        <li>College Fests</li>
-        <li>Graduation Ceremonies</li>
-        <li>Educational Fairs / Career Fairs</li>
-      </ul>
-    </section>
+    .hero .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-    <section class="category">
-      <h3>📡 Virtual & Hybrid Events</h3>
-      <ul>
-        <li>Webinars</li>
-        <li>Virtual Conferences</li>
-        <li>Live Streaming Events</li>
-        <li>Online Workshops</li>
-        <li>Hybrid Corporate Meetings</li>
-      </ul>
-    </section>
+    .hero a.button {
+      text-decoration: none;
+      background: white;
+      color: #4a90e2;
+      padding: 14px 28px;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: 0.3s;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .hero a.button:hover {
+      background: #eef4ff;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 15px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.1);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .hero a.button {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <div class="container">
+    <div class="event-categories">
+      <nav>
+        <a href="index.php">Home</a>
+        <a href="add_event.php">Add Event</a>
+        <a href="admin.php">Admin Panel</a>
+        <a href="landing.php">Landing</a>
+      </nav>
+    </div>
   </div>
-</div>
 
-   
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Welcome to EventBooking</h1>
+    <p>Book your favorite events, manage tickets, and enjoy unforgettable experiences.</p>
+    <div class="buttons">
+      <a href="index.php" class="button">Browse Events</a>
+      <a href="admin.php" class="button">Go to Admin Panel</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; <?= date('Y') ?> EventBooking. All rights reserved.
+  </footer>
+
+</body>
+</html>
